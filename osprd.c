@@ -98,7 +98,7 @@ void removeFromList(struct pidList** list, pid_t pid) {
     struct pidNode* cur;
     struct pidNode* toDelete;
 
-    if (list == NULL) {
+    if (list == NULL || *list == NULL) {
         return;
     }
 
